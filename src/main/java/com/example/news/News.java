@@ -12,26 +12,26 @@ import java.time.LocalDateTime;
 public class News {
 
     @Id
-    public String id;
+    private String id;
 
-    public Categories categories;
+    private Categories categories;
 
     @Indexed(unique = true)
-    public String subject;
+    private String subject;
 
-    public String header;
+    private String header;
 
-    public String paragraphFirst;
+    private String paragraphFirst;
 
-    public String photograph;
+    private String photograph;
 
-    public String paragraphSecond;
+    private String paragraphSecond;
 
-    public Address address;
+    private Address address;
 
-    public Author author;
+    private Author author;
 
-    public LocalDateTime created;
+    private LocalDateTime created;
 
     public News(Categories categories, String subject, String header, String paragraphFirst, String photograph, String paragraphSecond, Address address, Author author, LocalDateTime created) {
         this.categories = categories;

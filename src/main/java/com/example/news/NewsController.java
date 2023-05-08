@@ -20,8 +20,13 @@ public class NewsController {
     }
 
     @PostMapping("addNews")
-    public ResponseEntity addNews(@RequestBody News news){
-        return new ResponseEntity(newsService.addNews(news), HttpStatus.CREATED);
+    public ResponseEntity<News> addNews(@RequestBody News news){
+        return new ResponseEntity<>(newsService.addNews(news), HttpStatus.CREATED);
+    }
+
+    @GetMapping("getTop3News")
+    public List<News> getLatestNews() {
+        return newsService.getLatestNews();
     }
 
     @DeleteMapping("delete/{id}")
