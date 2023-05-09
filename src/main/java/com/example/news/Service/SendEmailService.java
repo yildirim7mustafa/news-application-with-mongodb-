@@ -1,5 +1,6 @@
-package com.example.news;
+package com.example.news.Service;
 
+import com.example.news.Entity.News;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +15,7 @@ public class SendEmailService {
 
     public List<String> SendEmail(){
         List<String> messages = new ArrayList<>();
-        List<String> emails = subscriberService.getAllEmails();
+        List<String> emails = subscriberService.getAllActiveEmails();
         List<News> news = newsService.getLatestNews();
 
         String news1 = news.get(0).getHeader() + " başlıklı "+ news.get(0).getSubject() + " konusu içeren mail, ";

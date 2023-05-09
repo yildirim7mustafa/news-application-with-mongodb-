@@ -1,6 +1,6 @@
-package com.example.news;
+package com.example.news.Repository;
 
-import org.springframework.data.annotation.CreatedDate;
+import com.example.news.Entity.News;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 

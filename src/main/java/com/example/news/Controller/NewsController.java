@@ -1,5 +1,7 @@
-package com.example.news;
+package com.example.news.Controller;
 
+import com.example.news.Entity.News;
+import com.example.news.Service.NewsService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

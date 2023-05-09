@@ -1,5 +1,7 @@
-package com.example.news;
+package com.example.news.Controller;
 
+import com.example.news.Service.SubscriberService;
+import com.example.news.Entity.Subscribers;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,5 +34,15 @@ public class SubscriberController {
     public ResponseEntity<Void> deleteNews(@PathVariable("id") String id){
         subscriberService.deleteSub(id);
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @GetMapping("active")
+    public List<String> getAllActiveEmails() {
+        return subscriberService.getAllActiveEmails();
+    }
+
+    @PutMapping("chActivity")
+    public void updateIsActive(@RequestParam String email, @RequestParam boolean isActive) {
+        subscriberService.updateIsActive(email, isActive);
     }
 }

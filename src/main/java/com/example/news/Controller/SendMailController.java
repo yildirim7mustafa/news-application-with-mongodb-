@@ -1,5 +1,6 @@
-package com.example.news;
+package com.example.news.Controller;
 
+import com.example.news.Service.SendEmailService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,11 +1,11 @@
-package com.example.news;
+package com.example.news.Service;
 
+import com.example.news.Entity.News;
+import com.example.news.Repository.NewsRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor

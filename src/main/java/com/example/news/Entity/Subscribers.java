@@ -1,4 +1,4 @@
-package com.example.news;
+package com.example.news.Entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -25,9 +25,12 @@ public class Subscribers {
         this.firstName = firstName;
         this.lastName = lastName;
         this.city = city;
-        this.isActive = true;
+        this.isActive = false;
         this.created = LocalDateTime.now();
     }
 
+    public void updateIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
 
 }
